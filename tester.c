@@ -31,7 +31,7 @@ unsigned int getRandom( unsigned int value_min, unsigned int value_max ) {
 }
 
 long long getLongRand() {
-	int len = getRandom(1, 18), part;
+	int len = getRandom(1, 18);
 	long long rn = 0;
 	for ( int i = 0; i < len; i++ ) {
 		rn *= 10;
@@ -157,8 +157,6 @@ void testTree(PTESTBLK testset, unsigned long long count) {
 	}
 	
 	printf("TEST: AVL tree\n");
-	
-	bool nulltest = (*(testset->value)) ? false : true;
 	
 	PNODE tree = NULL;
 	double *times = NULL;
